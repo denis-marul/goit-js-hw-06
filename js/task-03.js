@@ -16,14 +16,10 @@ const images = [
 const imgList = document.querySelector('.gallery');
 
 const elements = images.map(element => {
-  const imgLi = document.createElement('li');
-  imgLi.classList.add('item');
-  imgLi.insertAdjacentHTML(
+  imgList.insertAdjacentHTML(
     'afterbegin',
-    `<img class = "item_image" src="${element.url}" alt="${element.alt}">`
+    `<li class = "item"><img class = "item_image" src="${element.url}" alt="${element.alt}"></li>`
   );
-
-  return imgLi;
 });
 
 imgList.append(...elements);

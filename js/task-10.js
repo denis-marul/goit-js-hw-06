@@ -29,7 +29,7 @@ function createBoxes(amount) {
 }
 function destroyBoxes() {
   input.value = '';
-  return (divBoxes.innerHTML = '');
+  divBoxes.innerHTML = '';
 }
 btnDestroy.addEventListener('click', destroyBoxes);
 btnCreate.addEventListener('click', createBoxes);
